@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
+accountants_cvs = r'C:\Users\enszh\Documents\WeChat Files\wexin1554657859\FileStorage\File\2019-05\FIN_Audit.csv'
 url_query = 'http://cmispub.cicpa.org.cn/cicpa2_web/PersonIndexAction.do'
 url_html = 'http://cmispub.cicpa.org.cn/cicpa2_web/public/query0/2/00.shtml'
 host = 'http://cmispub.cicpa.org.cn'
@@ -11,7 +12,7 @@ item_num = 5
 
 def get_names():
     names = []
-    with open(r'C:\Users\enszh\Documents\WeChat Files\wexin1554657859\FileStorage\File\2019-05\FIN_Audit.csv') as f:
+    with open(accountants_cvs) as f:
         reader = csv.reader(f)
         i = 0
         for r in reader:
